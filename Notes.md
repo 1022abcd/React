@@ -2,11 +2,15 @@
 - [Let's Dive](#lets-dive)
 - [Building Content with JSX](#building-content-with-jsx)
 - [Communicating with Probs](#communicating-with-probs)
+- [Structuring Apps with Class-Based Components](#structuring-apps-with-class-based-components)
+- [State in React Component](#state-in-react-component)
 #Let's Dive
 **React** is a single JavaScript library
 Its ultimate purpose is to show content(HTML) to users and handle user interaction
 
 React 'Components' are made using either JavaScript function or classes
+- Functional Components : Good for simple content
+- Class Component : Good for just about everything else
 
 ###Why using both 'React' and 'ReactDom'
 - 'React' knows what a component is and how to make components work together.
@@ -88,6 +92,44 @@ React 'Components' are made using either JavaScript function or classes
 - Component Configuration
     - We should be able to configure a component when it is created 
 
-## The Probs
+### The Probs
 - System for passing data from a parent component to a child component
 - Goal is to customize or configure a child component
+
+---
+
+#Structuring Apps with Class-based Components
+React 'Components' are made using either JavaScript function or classes
+- Functional Components : Good for simple content
+- Class Component : Good for just about everything else
+    -When you create a class, there is one method to it 'render()'
+    -React expects that our class base component has many other methods attached to it
+    -We are extending class component 'React.Component' to use the built in functions  
+
+---
+
+#State in React Component 
+Rules of State
+- Only usable with Class Component
+- 'State' is a JS object that contains data relevant to a component 
+- Updating State on a component almost causes a component to (almost) instantly rerender
+- ***If we want to get a single component to update itself, we update its state***
+- State must be initialized when a component is created 
+- State can be only update by using 'setState'
+ 
+ ---
+
+ #Understanding Lifecycle methods
+ - Component Lifecycle
+    - Constructor
+    - Render
+        - Content visible on screen 
+    - ComponentDidMount
+        - Sit and wait for updates
+    - ComponentDidUpdate 
+        - Sit and wait until this component is no longer shown
+    - ComponentWillUnmount
+        
+
+
+
